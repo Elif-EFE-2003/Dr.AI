@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f8a897743878329488bcbeaeb64a1d2c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 171168
+  packageName: Sky_Protective_suit
+  packageVersion: 1.0
+  assetPath: Assets/Sky_Protective_suit/Materials/Standard(2sides).shader
+  uploadId: 376520
