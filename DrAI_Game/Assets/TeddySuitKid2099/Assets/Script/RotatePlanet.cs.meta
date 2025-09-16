@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ba940c81332715246b1615253bd1c772
+timeCreated: 1528761812
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 130141
+  packageName: Teddy Suit Kid 2
+  packageVersion: 1.0
+  assetPath: Assets/TeddySuitKid2099/Assets/Script/RotatePlanet.cs
+  uploadId: 271802
