@@ -79,10 +79,11 @@ pdfplumber, pypdf: PDF işleme
 **Google Maps ve MHRS üzerinden randevu bağlantıları otomatik oluşturulur.**
 
 ## Proje Yapısı
-### 📦 saglik-destek-asistani
- ┣ 📜 app.py                # Ana uygulama
- ┣ 📜 requirements.txt      # Gerekli bağımlılıklar
- ┣ 📜 README.md             # Bu dosya
- ┣ 📜 diabet_model.pkl      # Diyabet modeli
- ┣ 📜 menstrual_model.pkl   # Menstrüal model
- ┗ 📂 data/                 # (Opsiyonel) Örnek CSV şablonları
+
+📦 saglik-destek-asistani
+┣ 📜 app.py # Ana uygulama
+┣ 📜 requirements.txt # Gerekli bağımlılıklar
+┣ 📜 README.md # Bu dosya
+┣ 📜 diabet_model.pkl # Diyabet modeli
+┣ 📜 menstrual_model.pkl # Menstrüal model
+┗ 📂 data/ # (Opsiyonel) Örnek CSV şablonları
