@@ -89,7 +89,7 @@ Menstrüel sağlık için: Kadın Hastalıkları ve Doğum
 Google Maps ve MHRS üzerinden randevu bağlantıları otomatik oluşturulur.
 
 ## Proje Yapısı
-📦 saglik-destek-asistani
+# 📦 saglik-destek-asistani
  ┣ 📜 app.py                # Ana uygulama
  ┣ 📜 requirements.txt      # Gerekli bağımlılıklar
  ┣ 📜 README.md             # Bu dosya
