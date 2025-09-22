@@ -80,7 +80,7 @@ pdfplumber, pypdf: PDF işleme
 
 ## Proje Yapısı
 
-📦 saglik-destek-asistani
+### 📦 saglik-destek-asistani
 ┣ 📜 app.py # Ana uygulama
 ┣ 📜 requirements.txt # Gerekli bağımlılıklar
 ┣ 📜 README.md # Bu dosya
