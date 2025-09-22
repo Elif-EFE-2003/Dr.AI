@@ -37,10 +37,12 @@ Kullanıcı dostu arayüzü, laboratuvar raporlarını otomatik okuma özelliği
 ```bash
 git clone https://github.com/kullaniciadi/saglik-destek-asistani.git
 cd saglik-destek-asistani
+
 ### 2.Sanal Ortam Oluşturun ve Aktif Edin
 python -m venv .venv
 source .venv/bin/activate   # Linux / Mac
 .venv\Scripts\activate      # Windows
+
 ### 3.Gereksinimleri Kurun
 pip install -r requirements.txt
 ### 4. Modelleri Proje Dizininize Ekleyin
