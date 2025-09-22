@@ -4,35 +4,25 @@ Streamlit tabanlı bu uygulama, kullanıcıların diyabet ve menstrüel sağlık
 ⚠️ Not: Bu uygulama yalnızca ön değerlendirme amaçlıdır, kesin tanı yerine geçmez. Gerekli durumlarda mutlaka uzman bir hekime başvurunuz.
 
 ## ✨ Özellikler
-Makine Öğrenmesi Modelleri
+- 📊 **Makine Öğrenmesi Modelleri**
+  - Diyabet riski için sınıflandırma modeli
+  - Menstrüel sağlık problemleri için çok etiketli sınıflandırma modeli
 
-Diyabet riski için sınıflandırma modeli
+- 📄 **Laboratuvar Belgesi Yükleme**
+  - PDF, CSV veya Excel dosyası yükleyerek laboratuvar sonuçlarının otomatik işlenmesi
+  - Kan parametreleri (HbA1c, Hemoglobin, Ferritin, TSH, vb.) otomatik doldurulur
 
-Menstrüel sağlık problemleri için çok etiketli sınıflandırma modeli
+- 💬 **Soru-Cevap Akışı**
+  - Kullanıcıdan adım adım sorular alır
+  - İlgili değerler laboratuvar belgesinden otomatik doldurulabilir
+  - Yanıtlar işlendikten sonra kişiselleştirilmiş değerlendirme yapılır
 
-Laboratuvar Belgesi Yükleme
+- 📍 **Konum Desteği**
+  - Şehir ve ilçe girildiğinde, en yakın uzman doktoru bulmak için Google Maps ve MHRS linkleri oluşturur
 
-PDF, CSV veya Excel dosyası yükleyerek laboratuvar sonuçlarının otomatik işlenmesi
-
-Kan parametreleri (HbA1c, Hemoglobin, Ferritin, TSH, vb.) otomatik doldurulur
-
-Soru-Cevap Akışı
-
-Kullanıcıdan adım adım sorular alır
-
-İlgili değerler laboratuvar belgesinden otomatik doldurulabilir
-
-Yanıtlar işlendikten sonra kişiselleştirilmiş değerlendirme yapılır
-
-Konum Desteği
-
-Şehir ve ilçe girildiğinde, en yakın uzman doktoru bulmak için Google Maps ve MHRS linkleri oluşturur
-
-Modern Arayüz
-
-Özel CSS ile sade ve profesyonel görünüm
-
-Adım göstergesi (stepper) ve sohbet benzeri arayüz
+- 🎨 **Modern Arayüz**
+  - Özel CSS ile sade ve profesyonel görünüm
+  - Adım göstergesi (stepper) ve sohbet benzeri arayüz
 
 ## 🚀 Kurulum
 ### 1. Depoyu Klonlayın
