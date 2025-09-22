@@ -1,239 +1,118 @@
-#🩺 Sağlık Destek Asistanı
+# 🩺 Sağlık Destek Asistanı
 
-Sağlık Destek Asistanı, bireylerin temel sağlık verilerini girerek veya laboratuvar belgelerini yükleyerek ön değerlendirme yapmasını sağlayan, yapay zekâ destekli bir Streamlit web uygulamasıdır.
-Bu sistem, özellikle Diyabet ve Menstrüal Sağlık konularında farkındalık yaratmayı amaçlar.
-⚠️ Tıbbi teşhis yerine geçmez. Sadece eğitim ve yönlendirme amacı taşır.
+Streamlit tabanlı bu uygulama, kullanıcıların **diyabet** ve **menstrüel sağlık** üzerine ön değerlendirme yapabilmesini sağlar.  
+Kullanıcı dostu arayüzü, laboratuvar raporlarını otomatik okuma özelliği ve makine öğrenmesi modelleri ile kişisel sağlık desteği sunar.  
 
-#📖 İçindekiler
+⚠️ **Not:** Bu uygulama yalnızca **ön değerlendirme** amaçlıdır, **kesin tanı yerine geçmez**. Gerekli durumlarda mutlaka uzman bir hekime başvurunuz.
 
-Özellikler
+---
 
-Mimari ve Çalışma Prensibi
+## ✨ Özellikler
 
-Proje Yapısı
+- 📊 **Makine Öğrenmesi Modelleri**
+  - Diyabet riski için sınıflandırma modeli
+  - Menstrüel sağlık problemleri için çok etiketli sınıflandırma modeli
 
-Kurulum ve Çalıştırma
+- 📄 **Laboratuvar Belgesi Yükleme**
+  - PDF, CSV veya Excel dosyası yükleyerek laboratuvar sonuçlarının otomatik işlenmesi
+  - Kan parametreleri (HbA1c, Hemoglobin, Ferritin, TSH, vb.) otomatik doldurulur
 
-Kullanım Senaryosu
+- 💬 **Soru-Cevap Akışı**
+  - Kullanıcıdan adım adım sorular alır
+  - İlgili değerler laboratuvar belgesinden otomatik doldurulabilir
+  - Yanıtlar işlendikten sonra kişiselleştirilmiş değerlendirme yapılır
 
-Laboratuvar Dosyası İşleme
+- 📍 **Konum Desteği**
+  - Şehir ve ilçe girildiğinde, en yakın uzman doktoru bulmak için Google Maps ve MHRS linkleri oluşturur
 
-Örnek Çıktılar
+- 🎨 **Modern Arayüz**
+  - Özel CSS ile sade ve profesyonel görünüm
+  - Adım göstergesi (stepper) ve sohbet benzeri arayüz
 
-Teknolojiler
+---
 
-Geliştirme ve Katkı
+## 🚀 Kurulum
 
-Uyarı
-
-#✨ Özellikler
-
-Çoklu Konu Desteği
-
-🔹 Diyabet değerlendirmesi: Kan şekeri, HbA1c, kolesterol, BMI, hipertansiyon, sigara öyküsü vb.
-
-🔹 Menstrüal sağlık değerlendirmesi: Döngü uzunluğu, kanama miktarı, ağrı düzeyi, hormon değerleri vb.
-
-Laboratuvar Belgesi Yükleme
-
-PDF, CSV veya XLSX formatlarını destekler
-
-Belgelerden değerleri otomatik çıkarır (ör. Hemoglobin, Ferritin, HbA1c, TSH, vb.)
-
-Uygulamadaki soruları otomatik doldurur ve hızlandırır
-
-Sohbet Tabanlı Arayüz
-
-Sorular asistan tarafından sırayla yöneltilir
-
-Kullanıcı cevap verir, sistem ilerlemeyi stepper ile gösterir
-
-Sohbet geçmişi kullanıcıya şeffaf şekilde yansıtılır
-
-Model Tabanlı Tahmin
-
-diabet_model.pkl ve menstrual_model.pkl dosyaları ile scikit-learn tabanlı tahmin
-
-Diyabet için risk sınıflandırması (var/yok)
-
-Menstrüal sağlık için çoklu etiketli sınıflandırma (ör. Oligomenore, Menorrhagia vb.)
-
-Kişisel Öneriler & Yönlendirme
-
-Risk bulunduğunda → yaşam tarzı önerileri + ilgili uzman (Endokrinoloji, Kadın Doğum)
-
-Google Maps ve MHRS entegrasyonu ile yakındaki doktor/klinik arama desteği
-
-Modern Arayüz
-
-Inter fontu
-
-Responsive CSS düzeni
-
-Kurumsal ve profesyonel görünüm
-
-#🏗 Mimari ve Çalışma Prensibi
-
-Kullanıcı Etkileşimi
-
-Başlangıçta konu seçimi: Diyabet veya Menstrüal
-
-Sorular, sohbet ekranında adım adım sorulur
-
-Kullanıcı cevaplar girer veya laboratuvar dosyası yükler
-
-Veri Ön İşleme (Preprocessing)
-
-Cevaplar numeric/categorical forma dönüştürülür
-
-Modelin beklediği kolon isimleri ile DataFrame oluşturulur
-
-Model Tahmini
-
-İlgili pickle modeli (joblib.load) çağrılır
-
-.predict() çalıştırılır → risk sınıfları elde edilir
-
-#Sonuç & Öneriler
-
-Menstrüal: Çoklu etiket raporu (ör. “Polymenorrhea: Var → hormonal dengesizlik olabilir”)
-
-Diyabet: Risk var/yok, öneriler listesi
-
-Uzman yönlendirmesi: Google Maps + MHRS linkleri
-
-Kayıtlı Sohbet
-
-Mesajlar st.session_state.messages listesinde saklanır
-
-Kullanıcı geçmişi ekranın altında gösterilir
-
-#📂 Proje Yapısı
-.
-├── app.py                # Ana Streamlit uygulaması
-├── requirements.txt      # Bağımlılıklar
-├── diabet_model.pkl      # Diyabet modeli
-├── menstrual_model.pkl   # Menstrüal sağlık modeli
-├── lab_sablon.csv        # Örnek CSV şablonu
-└── README.md             # Bu dosya
-
-#⚙️ Kurulum ve Çalıştırma
-1) Depoyu klonla
-git clone <repo-url>
+### 1. Depoyu Klonlayın
+```bash
+git clone https://github.com/kullaniciadi/saglik-destek-asistani.git
 cd saglik-destek-asistani
-
-2) Sanal ortam oluştur
+### 2.Sanal Ortam Oluşturun ve Aktif Edin
 python -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
-
-3) Bağımlılıkları yükle
+source .venv/bin/activate   # Linux / Mac
+.venv\Scripts\activate      # Windows
+### 3.Gereksinimleri Kurun
 pip install -r requirements.txt
+### 4. Modelleri Proje Dizininize Ekleyin
+menstrual_model.pkl
 
-4) Uygulamayı çalıştır
+diabet_model.pkl
+
+Eğer bu dosyalar yoksa, uygulama çalışırken hata verecektir.
+### 5. Uygulamayı Başlatın
 streamlit run app.py
-
-5) Tarayıcıda aç
-
-👉 http://localhost:8501
-
-#🧪 Kullanım Senaryosu
-
-Kullanıcı uygulamayı açar → “Diyabet” veya “Menstrüal” seçer
-
-Sorular sohbet ekranında sırasıyla gelir
-
-Kullanıcı cevap girer veya PDF/CSV/XLSX laboratuvar raporunu yükler
-
-Sistem otomatik doldurulan sorularla ilerler
-
-Model tahmini yapılır → risk raporu hazırlanır
-
-Kullanıcıya yaşam tarzı önerileri + uzman yönlendirme linkleri verilir
-
-#📄 Laboratuvar Dosyası İşleme
-
-Desteklenen formatlar: PDF, CSV, XLSX
-
-Otomatik çıkarılan parametreler:
-
-Hemoglobin, Ferritin, TSH, Prolaktin, FSH/LH
-
-Random Glucose, HbA1c, Kolesterol
-
-Kan şekeri (açlık/tokluk)
-
-Örnek CSV şablonu:
-
-Parameter	Value
-Hemoglobin	13.8
-Ferritin	22
-TSH	1.9
-Prolactin	12
-FSH/LH	1.6
-Random Glucose	98
-HbA1c	5.6
-Cholesterol	180
-#📊 Örnek Çıktılar
-Diyabet Değerlendirmesi
-- Model, verdiğiniz değerlere göre diyabet açısından anlamlı risk olabileceğini gösteriyor.
-- Rafine karbonhidratı azaltın, düzenli egzersiz yapın.
-- Endokrinoloji uzmanına başvurun.
-
-Menstrüal Sağlık Değerlendirmesi
-- Oligomenorrhea: Var → PCOS veya kilo değişiklikleri ile ilişkili olabilir.
-- Menorrhagia: Yok
-- Amenorrhea: Yok
-...
-Öneri: Kadın Doğum uzmanına başvurun.
-
-#🛠 Teknolojiler
-
+## 🧠 Kullanılan Teknolojiler
 Python 3.10+
 
 Streamlit
  → Web arayüzü
 
 scikit-learn
- → ML modelleri
+ → Makine öğrenmesi modelleri
 
 pandas
+ & numpy
  → Veri işleme
 
-numpy
- → Matematiksel işlemler
-
 pdfplumber
- & pypdf
+, pypdf
  → PDF işleme
+## 📊 Örnek Kullanım
+1. Başlangıç Ekranı
 
-#👩‍💻 Geliştirme ve Katkı
+Uygulama açıldığında kullanıcıya iki seçenek sunulur:
 
-Yeni sağlık alanları eklenebilir (ör. Hipertansiyon, Anemi vb.)
+Diyabet değerlendirmesi
 
-UI/UX geliştirmeleri yapılabilir (mobil uyum, temalar)
+Menstrüal sağlık değerlendirmesi
 
-Docker veya Hugging Face Spaces ile deploy seçenekleri eklenebilir
+2. Laboratuvar Belgesi Yükleme
 
-Katkıda bulunmak isteyenler:
+PDF, CSV veya XLSX formatında laboratuvar raporu yüklenir
 
-Fork edin
+Otomatik değer tespiti yapılır:
 
-Branch oluşturun (feature/xyz)
+HbA1c, Glukoz, Kolesterol, Hemoglobin, Ferritin, TSH vb.
 
-Commit + PR gönderin
+3. Soru-Cevap Akışı
 
-#🔒 Uyarı
+Uygulama, kullanıcıya adım adım sorular yöneltir
 
-Bu uygulama:
+Eksik bilgiler manuel olarak girilebilir
 
-✅ Eğitim ve farkındalık amacı taşır
+Laboratuvar değerleri varsa sorular otomatik atlanır
 
-❌ Kesin tıbbi teşhis koymaz
+4. Sonuçlar
 
-⚠️ Belirtileriniz varsa mutlaka doktora başvurun
+Diyabet için risk değerlendirmesi
 
-📌 Sağlık bir yolculuktur. Bu uygulama sadece yol göstericidir.
+Menstrüal sağlık için çok etiketli değerlendirme (ör. menorrhagia, oligomenorrhea, vb.)
 
----
+Öneriler ve gerektiğinde uzman yönlendirmeleri
+## Uzman Yönlendirmeleri
+Riskli durumlarda kullanıcıya yönlendirmeler yapılır:
 
-© 2025 – DreamCoders
+Diyabet için: Endokrinoloji
+
+Menstrüal sağlık için: Kadın Hastalıkları ve Doğum
+
+Google Maps ve MHRS üzerinden randevu bağlantıları otomatik oluşturulur.
+## Proje Yapısı
+📦 saglik-destek-asistani
+ ┣ 📜 app.py               # Ana uygulama
+ ┣ 📜 requirements.txt     # Gerekli bağımlılıklar
+ ┣ 📜 README.md            # Bu dosya
+ ┣ 📜 diabet_model.pkl     # Diyabet modeli
+ ┣ 📜 menstrual_model.pkl  # Menstrüal model
+ ┗ 📂 data/                # (Opsiyonel) Örnek CSV şablonları
+
