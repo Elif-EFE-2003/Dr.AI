@@ -1,5 +1,3 @@
-# Dr.AI – AI Destekli Sağlık Simülasyonu
-
 #🩺 Sağlık Destek Asistanı
 
 Sağlık Destek Asistanı, bireylerin temel sağlık verilerini girerek veya laboratuvar belgelerini yükleyerek ön değerlendirme yapmasını sağlayan, yapay zekâ destekli bir Streamlit web uygulamasıdır.
