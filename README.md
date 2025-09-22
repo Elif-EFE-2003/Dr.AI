@@ -61,22 +61,22 @@ pandas & numpy: Veri işleme
 pdfplumber, pypdf: PDF işleme
 
 ## 📊 Örnek Kullanım
-Başlangıç Ekranı: Uygulama açıldığında kullanıcıya iki seçenek sunulur: Diyabet veya Menstrüel Sağlık değerlendirmesi.
+**Başlangıç Ekranı: Uygulama açıldığında kullanıcıya iki seçenek sunulur: Diyabet veya Menstrüel Sağlık değerlendirmesi.** 
 
-Laboratuvar Belgesi Yükleme: PDF, CSV veya XLSX formatında laboratuvar raporu yüklenerek otomatik değer tespiti yapılır: HbA1c, Glukoz, Kolesterol, Hemoglobin, Ferritin, TSH vb.
+**Laboratuvar Belgesi Yükleme: PDF, CSV veya XLSX formatında laboratuvar raporu yüklenerek otomatik değer tespiti yapılır: HbA1c, Glukoz, Kolesterol, Hemoglobin, Ferritin, TSH vb.**
 
-Soru-Cevap Akışı: Uygulama, kullanıcıya adım adım sorular yöneltir. Eksik bilgiler manuel olarak girilebilir. Laboratuvar değerleri varsa sorular otomatik atlanır.
+**Soru-Cevap Akışı: Uygulama, kullanıcıya adım adım sorular yöneltir. Eksik bilgiler manuel olarak girilebilir. Laboratuvar değerleri varsa sorular otomatik atlanır.**
 
-Sonuçlar: Diyabet için risk değerlendirmesi ve menstrüel sağlık için çok etiketli değerlendirme (örn. menorrhagia, oligomenorrhea, vb.) sunulur.
+**Sonuçlar: Diyabet için risk değerlendirmesi ve menstrüel sağlık için çok etiketli değerlendirme (örn. menorrhagia, oligomenorrhea, vb.) sunulur.**
 
 ## Uzman Yönlendirmeleri
-Riskli durumlarda kullanıcıya yönlendirmeler yapılır:
+**Riskli durumlarda kullanıcıya yönlendirmeler yapılır:**
 
-Diyabet için: Endokrinoloji
+-Diyabet için: Endokrinoloji
 
-Menstrüel sağlık için: Kadın Hastalıkları ve Doğum
+-Menstrüel sağlık için: Kadın Hastalıkları ve Doğum
 
-Google Maps ve MHRS üzerinden randevu bağlantıları otomatik oluşturulur.
+**Google Maps ve MHRS üzerinden randevu bağlantıları otomatik oluşturulur.**
 
 ## Proje Yapısı
 ### 📦 saglik-destek-asistani
